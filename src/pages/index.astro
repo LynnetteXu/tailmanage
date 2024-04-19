@@ -1,15 +1,18 @@
 ---
 import "../styles/input.css";
 const year = new Date().getFullYear();
+const siteName = "Manage";
+
+
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>{ siteName }</title>
   </head>
   <body>
     <!-- Navigation -->
@@ -18,7 +21,9 @@ const year = new Date().getFullYear();
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <div class="pt-2">
-          <img src="/images/logo.svg" alt="manage site" />
+          <a href="/" class="site-link block">
+            <img src="/images/logo.svg" alt="manage site" />
+          </a>
         </div>
         <!-- <a href="/" class="text-xl font-bold">Manage</a> -->
         <!-- Navigation links desktop only -->
@@ -330,7 +335,7 @@ const year = new Date().getFullYear();
 				<input type="email" placeholder="Updates in your inbox..." class="flex-1 px-4 rounded-full focus:outline-none" />
 				<button type="submit" class="p-3 px-6 text-white bg-brightRed hover:bg-brightRedLight rounded-full focus:outline-none">Go</button>
 			</form>
-			<p class="hidden text-sm text-veryLightGray md:block">
+			<p class="hidden opacity-50 text-sm text-veryLightGray md:block">
 				Copyright &copy; {year}. All rights Reserved.
 			</p>
 		</div>
