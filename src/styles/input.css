@@ -1,0 +1,89 @@
+body {
+    background-image: url('/images/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: 50px -50px;
+}
+
+#cta-section {
+    background-image: url('/images/bg-simplify-section-mobile.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+@media screen and (min-width: 576px) {
+    body {
+        background-size: 800px;
+        background-position: 90% -25%;
+    }
+    #cta-section {
+        background-image: url('/images/bg-simplify-section-desktop.svg');
+        background-size: cover;
+        background-position: 0 0;
+    }
+}
+/* Hamburger Menu */
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all .3s ease;
+    position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .3s ease;
+}
+.hamburger-middle {
+    transform: translateY(7px);
+}
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+.hamburger.open .hamburger-top {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open .hamburger-middle {
+    opacity: 0;
+}
+.hamburger.open .hamburger-bottom {
+    transform: translateY(7px) rotate(-45deg);
+}
+
+/* title */
+.title:after {
+    display: block;
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 100%;
+    background-color: #fdebe7;
+}
+@media screen and (min-width: 576px) {
+    .title:after {
+        display: none;
+    }
+}
+
+/* Splide custom styling */
+button.splide__pagination__page {
+    border: 1px;
+    border-style: solid;
+    background-color: white;
+    border-color: hsl(12, 88%, 59%);
+}
+button.splide__pagination__page.is-active {
+    opacity: 1;
+    background-color: hsl(12, 88%, 59%);
+}
